@@ -71,16 +71,26 @@ $db = sparql_connect('http://dbpedia.org/sparql/'); #Conecta com a DBpedia
 
 	};
 
-	function achaAssociados($recurso){
+	function achaParecidosGenero($recurso){
 		$lista = array();
-		$query = "SELECT DISTINCT ?associado WHERE{
-		         {dbr:$recurso dbo:associatedMusicalArtist ?associado}
-		             UNION
-		         {?associado dbo:associatedMusicalArtist dbr:$recurso}
-		             UNION
-		         {dbr:$recurso dbo:associatedBand ?associado}
-		             UNION
-		         {?associado dbo:associatedBand dbr:$recurso}}";
+		$query = "SELECT DISTINCT ?parecidoNome WHERE{
+		          dbr:$recurso dbo:genre ?genre .
+		          
+		          {dbr:$recurso dbo:hometown ?local}
+		              UNION
+		          {dbr:$recurso dbo:birthPlace ?local} .
+		          
+		          dbr:$recurso dbo:activeYearsStartYear ?ano .
+		          
+		          ?parecidoGenero dbo:genre ?genre
+
+		          {?parecidoGenero dbo:hometown ?local}
+		              UNION
+		          {?parecidoGenero dbo:birthPlace ?local} .
+
+		          ?parecidoGenero dbo:activeYearsStartYear ?anoParecido
+		              FILTER(year(?anoParecido) >= (year(?ano)-5) && year(?anoParecido) <= (year(?ano)+5) && ?parecidoGenero != dbr:$recurso)
+		          ?parecidoGenero foaf:name ?parecidoNome}";
 		$result = sparql_query($query);
 		$fields = sparql_field_array($result);
 		while($row = sparql_fetch_array($result)){
@@ -88,16 +98,55 @@ $db = sparql_connect('http://dbpedia.org/sparql/'); #Conecta com a DBpedia
         		$lista[] = $row[$field];
         	}
         }
-    	return $lista;
+    	return array_unique($lista);
+
 	}
 
-    $artistas = achaArtista("Caetano Veloso");
+	function achaAssociados($recurso){
+		$lista = array();
+		$query = "SELECT DISTINCT ?associadoNome ?associado2Nome WHERE{
+		         dbr:$recurso dbo:genre ?genre .
+		         
+		         {dbr:$recurso dbo:associatedMusicalArtist ?associado}
+		             UNION
+		         {?associado dbo:associatedMusicalArtist dbr:$recurso}
+		             UNION
+		         {dbr:$recurso dbo:associatedBand ?associado}
+		             UNION
+		         {?associado dbo:associatedBand dbr:$recurso} .
+		         
+		         {?associado dbo:associatedMusicalArtist ?associado2}
+		             UNION
+		         {?associado2 dbo:associatedMusicalArtist ?associado}
+		             UNION
+		         {?associado dbo:associatedBand ?associado2}
+		             UNION
+		         {?associado2 dbo:associatedBand ?associado} .
+
+		         ?associado dbo:genre ?genreAssoc .
+		         ?associado2 dbo:genre ?genreAssoc2 .
+
+		         FILTER(?genreAssoc = ?genre && ?genreAssoc2 = ?genre && ?associado != dbr:$recurso && ?associado2 != dbr:$recurso)
+		         ?associado foaf:name ?associadoNome .
+		         ?associado2 foaf:name ?associado2Nome}";
+		$result = sparql_query($query);
+		$fields = sparql_field_array($result);
+		while($row = sparql_fetch_array($result)){
+        	foreach($fields as $field){
+        		$lista[] = $row[$field];
+        	}
+        }
+    	return array_unique($lista);
+	}
+
+    $artistas = achaArtista("Rita Lee");
     foreach($artistas as $artista){
     	$aux = substr($artista, 28); #Retira o http://dbpedia.org/resource/
     	$generos = achaGeneros($aux);
     	$locais = achaLocal($aux);
     	$anos = achaAno($aux);
     	$associados = achaAssociados($aux);
+    	$parecidos = achaParecidosGenero($aux);
     }
     foreach($generos as $genero){
     	echo $genero, "<br>";
@@ -110,6 +159,9 @@ $db = sparql_connect('http://dbpedia.org/sparql/'); #Conecta com a DBpedia
     }
     foreach($associados as $associado){
     	echo $associado, "<br>";
+    }
+    foreach($parecidos as $parecido){
+    	echo $parecido, "<br>";
     }
 
 ?>
