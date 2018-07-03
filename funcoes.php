@@ -106,19 +106,35 @@ function insereArtista($nome, $genres){
     	}
     }   	    
 };
-if(!empty($_POST['login']) && !empty($_POST['nome']) && !empty($_POST['caminho'])){
-	lerUsuario($_POST['caminho'], $_POST['login'], $_POST['nome']);
+
+function insereEvento($nome, $local, $data, $descricao, $artista){
+    $procura = find('artista', $artista);
+	if($procura==null){
+	    insereArtista($artista, null);
+	}
+	$dados['Nome'] = $nome;
+	$dados['Local'] = $local;
+	$dados['Data'] = $data;
+	$dados['Descricao'] = $descricao;
+	$dados['Artista'] = $artista;
+
+	save('evento', $dados);
+};
+
+if(!empty($_POST['nome']) && !empty($_POST['local']) && !empty($_POST['data']) && !empty($_POST['descricao']) && !empty($_POST['artista'])){
+	insereEvento($_POST['nome'], $_POST['local'], $_POST['data'], $_POST['descricao'], $_POST['artista']);
 }
 else{?>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<form method="post" action="">
-	<label>Login Spotify</label> <input type="text" name="login"> <br>
 	<label>Nome</label> <input type="text" name="nome"> <br>
-	<label>Caminho JSON</label> <input type="text" name="caminho"> <br>
+	<label>Local</label> <input type="text" name="local"> <br>
+	<label>Data</label> <input type="date" name="data"> <br>
+	<label>Descrição</label> <input type="text" name="descricao"> <br>
+	<label>Artista</label> <input type="text" name="artista"> <br>
 	<input type="submit">
 	</form>
 
 <?php }
-
 
 ?>
