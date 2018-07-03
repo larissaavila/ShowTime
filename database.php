@@ -1,7 +1,7 @@
 <?php
 
 require_once "config.php";
-set_time_limit(180);
+set_time_limit(1800);
 
 mysqli_report(MYSQLI_REPORT_STRICT);
 
@@ -12,6 +12,7 @@ function open_database() {
 	try {
 
 		$conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+    $conn->set_charset("utf8");
 
 		return $conn;
 
@@ -49,7 +50,7 @@ function close_database($conn) {
 
  */
 
-function find( $table = null, $id = null ) {
+function find( $table = null, $id = null, $what = null ) {
 
   
 
@@ -62,7 +63,9 @@ function find( $table = null, $id = null ) {
 	try {
 
 	  if ($id) {
-
+      if(strpos($id, "'")){
+        $id = str_replace("'", "''", $id);
+      }
 	  	$sql = "SELECT * FROM " . $table;
 
 	  	if($table == "artista" || $table == "evento" || $table == "possuigenero" || $table == "possuilocal"){
@@ -71,11 +74,18 @@ function find( $table = null, $id = null ) {
 
 	  	}
 
-	  	elseif($table == "usuario" || $table == "gosta"){
+	  	elseif($table == "usuario"){
 
 	  		$sql .= " WHERE Login LIKE '%$id%'";
 
 	  	}
+
+      elseif($table == "gosta"){
+        if($what == 0)
+          $sql .= " WHERE Login LIKE '%$id%'";
+        else
+          $sql .= " WHERE Nome LIKE '%$id%'";
+      }
 
 	  	else{
 
@@ -179,7 +189,8 @@ function save($table = null, $data = null) {
   foreach ($data as $key => $value) {
 
     $columns .= trim($key, "'") . ",";
-
+    if(strpos($value, "'"))
+      $value = str_replace("'", "''", $value);
     $values .= "'$value',";
 
   }
@@ -195,7 +206,6 @@ function save($table = null, $data = null) {
   
 
   $sql = "INSERT INTO " . $table . "($columns)" . " VALUES " . "($values);";
-
 
 
   try {
@@ -234,7 +244,7 @@ function save($table = null, $data = null) {
 
  */
 
-/*function update($table = null, $id = 0, $data = null) {
+function update($table = null, $id = 0, $data = null) {
 
 
 
@@ -247,7 +257,8 @@ function save($table = null, $data = null) {
 
 
   foreach ($data as $key => $value) {
-
+    if(strpos($value, "'"))
+      $value = str_replace("'", "''", $value);
     $items .= trim($key, "'") . "='$value',";
 
   }
@@ -258,23 +269,24 @@ function save($table = null, $data = null) {
 
   $items = rtrim($items, ',');
 
-
+  if(strpos($id, "'"))
+    $id = str_replace("'", "''", $id);
 
   $sql  = "UPDATE " . $table;
 
   $sql .= " SET $items";
 
-  if($table == "atestadomatricula")
+  if($table == "artista" || $table == "possuigenero" || $table == "possuilocal" || $table == "evento")
 
-      $sql .=" WHERE NUMMATRICULA LIKE '%$id%'";
+      $sql .=" WHERE Nome LIKE '%$id%'";
 
-  elseif($table == "listabolsistas")
+  elseif($table == "usuario" || $table == "gosta")
 
-      $sql .=" WHERE CPF LIKE '%$id%'";
+      $sql .=" WHERE Login LIKE '%$id%'";
 
   else
 
-      $sql .=" WHERE EMAIL LIKE '%$id%'";
+      $sql .=" WHERE A LIKE '%$id%'";
 
 
 
@@ -304,7 +316,7 @@ function save($table = null, $data = null) {
 
   close_database($database);
 
-}*/
+}
 
 
 
