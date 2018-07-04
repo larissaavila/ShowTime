@@ -7,7 +7,6 @@
  * @version 1.0
  * @package ShowTime
  */
-include 'Artista.php';
 class Evento
 {
 	/**
@@ -27,7 +26,13 @@ class Evento
      * inserir evento novo no banco de dados
      * @access public
      */
-    public function __construct() {
+    public function __construct($evento) {
+        $this->nome = $evento['Nome'];
+        $this->local = $evento['Local'];
+        $this->data = $evento['Data'];
+        $this->descricao = $evento['Descricao'];
+        $this->imagem = $evento['Imagem'];
+        $this->Artista = $evento['Artista'];
 
     }
 

@@ -19,16 +19,55 @@ class Artista
      * @var local array contendo o local de nascimento do artista (retirado do dbpedia)
      * @var associados array contendo os artistas associados ao artista (retirado do dbpedia)
      */
-	private $nome, $anoInicio, $imagem, $genero, $local, $associados;
+	private $nome, $anoInicio, $imagem;
+    private $genero = array(), $local = array(), $associados = array();
 
 	/**
      * Construtor
      * @access public
      */
-    public function __construct() {
+    public function __construct($nome) {
+        $this->nome = $nome;
 
     }
 
+    public function carrega(){
+        $artista = $find('artista', $this->nome);
+        if($artista==null){
+            echo "Artista não encontrado", "<br>";
+            return null;
+        }
+        else{
+            $this->anoInicio = $artista['anoInicio'];
+            $this->imagem = $artista['imagen'];
+            $generos = find('possuigenero', $this->nome);
+            if($generos==null)
+                $this->genero = null;
+            else
+                foreach($generos as $genero)
+                    $this->genero[] = $genero['Genero'];
+            $locais = find('possuilocal', $this->nome);
+            if($locais==null)
+                $this->local = null;
+            else
+                foreach($locais as $local)
+                    $this->local[] = $local['Local'];
+            $associados = find('associado', $this->nome);
+            if($associados==null)
+                $this->associados = null;
+            else
+                foreach($associados as $associado)
+                    $this->associados[] = $associado['B'];
+        }
+    }
+
+    public function getNome(){
+        return $this->nome;
+    }
+
+    public function getAssociados(){
+        return $this->associados;
+    }
 
 
 }

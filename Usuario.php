@@ -9,6 +9,7 @@
  */
 include 'Artista.php';
 include 'Evento.php';
+include 'database.php';
 class Usuario
 {
     /**
@@ -18,15 +19,14 @@ class Usuario
      * @var topArtistas array contendo os top artistas favoritos do usuário dado pelo Spotify
      * @var eventos array contendo os eventos confirmados pelo usuário
      */
-	private $login, $nome, $topArtistas, $eventos;
+	private $login, $nome;
+    private $eventos = array(), $recomendacoes = array(), $topArtistas = array();
 
 	 /**
      *Construtor que deve começar com valores default até o login ser autenticado
      * @access public
      */
     public function __construct() {
-    	$this->login = "";
-    	$this->nome = "";
     }
 
      /**
@@ -37,7 +37,59 @@ class Usuario
      * @return int Indicando se o login foi feito corretamente ou erro de usuário inexistente
      */
     public function login($login){
+        $this->login = $login;
+        $procura = find('usuario', $login);
+        if($procura==null)
+            return null;
+        else{
+            $this->nome = $procura['Nome'];
+            $procura = find('gosta', $login, 0);
+            if($procura==null){
+                echo "Erro: usuário não possui artistas na tabela gosta";
+                return null;
+            }
+            else{
+                foreach($procura as $gosto){
+                    $artista = new Artista($gosto['Nome']);
+                    $artista->carrega();
+                    $this->topArtistas[] = $artista;
+                }
+            }
+            return 1;
+        }
+    }
 
+    public function recomendar(){
+        $i = 0;
+        foreach($this->topArtistas as $topArtista){
+            $eventos = find('evento', $topArtista->getNome());
+            if($eventos!=null){
+                foreach($eventos as $evento){
+                    $show = New Evento($evento);
+                    $this->recomendacoes[$i]['Evento'] = $show;
+                    $this->recomendacoes[$i]['Artista'] = $evento['Artista'];
+                    $this->recomendacoes[$i]['Associado'] = null;
+                    $i++;    
+                }
+            }
+            foreach($topArtista->getAssociados() as $associado){
+                $eventos = find('evento', $associado);
+                if($eventos!=null){
+                    foreach($eventos as $evento){
+                        $show = new Evento($evento);
+                        $this->recomendacoes[$i]['Evento'] = $show;
+                        $this->recomendacoes[$i]['Artista'] = $topArtista->getNome();
+                        $this->recomendacoes[$i]['Associado'] = $evento['Artista'];
+                        $i++;    
+                    }
+                }
+            }
+
+        }
+    }
+
+    public function getRecomendacoes(){
+        return $this->recomendacoes;
     }
 
      /**
