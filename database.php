@@ -6,7 +6,6 @@ set_time_limit(1800);
 mysqli_report(MYSQLI_REPORT_STRICT);
 
 
-
 function open_database() {
 
 	try {
@@ -31,8 +30,7 @@ function close_database($conn) {
  *  Pesquisa um Registro pelo ID em uma Tabela
  */
 
-function find( $table = null, $id = null, $what = null ) {
-	$database = open_database();
+function find($conn, $table = null, $id = null, $what = null ) {
 	$found = null;
 
 	try {
@@ -42,7 +40,7 @@ function find( $table = null, $id = null, $what = null ) {
 		      }
 		  	$sql = "SELECT * FROM " . $table;
 
-		  	if($table == "artista" || $table == "evento" || $table == "possuigenero" || $table == "possuilocal"){
+		  	if($table == "artista" || $table == "possuigenero" || $table == "possuilocal"){
 		  		$sql .= " WHERE Nome LIKE '%$id%'";
 		  	}
 		  	elseif($table == "usuario"){
@@ -54,13 +52,16 @@ function find( $table = null, $id = null, $what = null ) {
 	        	else
 	          		$sql .= " WHERE Nome LIKE '%$id%'";
 	      	}
+	      	elseif($table == "evento"){
+	      		$sql .= " WHERE Artista LIKE '%$id%'";
+	       	}
 		  	else{
 		  		$sql .= " WHERE A LIKE '%$id%'";
 		  	}
-		    $result = $database->query($sql);
+		    $result = $conn->query($sql);
 
 		    if ($result->num_rows > 0) {
-		      	$found = $result->fetch_assoc();
+		      	$found = $result->fetch_all(MYSQLI_ASSOC);
 		    }	    
 	 	} else {
 
@@ -88,21 +89,19 @@ function find( $table = null, $id = null, $what = null ) {
 		$_SESSION['message'] = $e->GetMessage();
 	  	$_SESSION['type'] = 'danger';
   	}
-	close_database($database);
 	return $found;
 }
 
 
-function find_all( $table ) {
-	return find($table);	
+function find_all($conn, $table ) {
+	return find($conn, $table);	
 }
 
 /**
 *  Insere um registro no BD
 */
 
-function save($table = null, $data = null) {
-	$database = open_database();
+function save($conn, $table = null, $data = null) {
 	$columns = null;
 	$values = null;
   	foreach ($data as $key => $value) {
@@ -119,14 +118,13 @@ function save($table = null, $data = null) {
   	$sql = "INSERT INTO " . $table . "($columns)" . " VALUES " . "($values);";
 
   	try {
-	    $database->query($sql);
+	    $conn->query($sql);
 	    $_SESSION['message'] = 'Registro cadastrado com sucesso.';
 	    $_SESSION['type'] = 'success';
 	} catch (Exception $e) { 
 	    $_SESSION['message'] = 'Nao foi possivel realizar a operacao.';
 	    $_SESSION['type'] = 'danger';
 	} 
-	close_database($database);
 }
 
 
@@ -137,8 +135,7 @@ function save($table = null, $data = null) {
 
  */
 
-function update($table = null, $id = 0, $data = null) {
-	$database = open_database();
+function update($conn, $table = null, $id = 0, $data = null) {
 	$items = null;
 	foreach ($data as $key => $value) {
 	    if(strpos($value, "'"))
@@ -164,14 +161,13 @@ function update($table = null, $id = 0, $data = null) {
 		$sql .=" WHERE A LIKE '%$id%'";
 
   	try {
-	    $database->query($sql);
+	    $conn->query($sql);
 	    $_SESSION['message'] = 'Registro atualizado com sucesso.';
 	    $_SESSION['type'] = 'success';
 	} catch (Exception $e) { 
 		$_SESSION['message'] = 'Nao foi possivel realizar a operacao.';
     	$_SESSION['type'] = 'danger';
   	} 
-	close_database($database);
 }
 
 

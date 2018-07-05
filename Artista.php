@@ -7,13 +7,14 @@
  * @version 1.0
  * @package ShowTime
  */
-include 'WSO/sparql.php';
+include 'sparql.php';
+include 'database.php';
 class Artista
 {
 	/**
      *
      * @var nome contendo o nome do artista
-     * @var anoInicil contendo o ano em que o artista começou a carreira
+     * @var anoInicio contendo o ano em que o artista começou a carreira
      * @var imagem contendo uma imagem do artista (geralmente retirado do Spotify)
      * @var genero array contendo os generos do artista (retirado do dbpedia)
      * @var local array contendo o local de nascimento do artista (retirado do dbpedia)
@@ -31,28 +32,28 @@ class Artista
 
     }
 
-    public function carrega(){
-        $artista = $find('artista', $this->nome);
+    public function carrega($conn){
+        $artista = find($conn, 'artista', $this->nome);
         if($artista==null){
             echo "Artista não encontrado", "<br>";
             return null;
         }
         else{
-            $this->anoInicio = $artista['anoInicio'];
-            $this->imagem = $artista['imagen'];
-            $generos = find('possuigenero', $this->nome);
+            $this->anoInicio = $artista[0]['anoInicio'];
+            $this->imagem = $artista[0]['Imagem'];
+            $generos = find($conn,'possuigenero', $this->nome);
             if($generos==null)
                 $this->genero = null;
             else
                 foreach($generos as $genero)
                     $this->genero[] = $genero['Genero'];
-            $locais = find('possuilocal', $this->nome);
+            $locais = find($conn,'possuilocal', $this->nome);
             if($locais==null)
                 $this->local = null;
             else
                 foreach($locais as $local)
                     $this->local[] = $local['Local'];
-            $associados = find('associado', $this->nome);
+            $associados = find($conn,'associado', $this->nome);
             if($associados==null)
                 $this->associados = null;
             else

@@ -9,7 +9,6 @@
  */
 include 'Artista.php';
 include 'Evento.php';
-include 'database.php';
 class Usuario
 {
     /**
@@ -38,12 +37,15 @@ class Usuario
      */
     public function login($login){
         $this->login = $login;
-        $procura = find('usuario', $login);
-        if($procura==null)
+        $conn = open_database();
+        $procura = find($conn, 'usuario', $login);
+        if($procura==null){
+            close_database($conn);
             return null;
+        }
         else{
-            $this->nome = $procura['Nome'];
-            $procura = find('gosta', $login, 0);
+            $this->nome = $procura[0]['Nome'];
+            $procura = find($conn, 'gosta', $login, 0);
             if($procura==null){
                 echo "Erro: usuário não possui artistas na tabela gosta";
                 return null;
@@ -51,18 +53,20 @@ class Usuario
             else{
                 foreach($procura as $gosto){
                     $artista = new Artista($gosto['Nome']);
-                    $artista->carrega();
+                    $artista->carrega($conn);
                     $this->topArtistas[] = $artista;
                 }
             }
+            close_database($conn);
             return 1;
         }
     }
 
     public function recomendar(){
         $i = 0;
+        $conn = open_database();
         foreach($this->topArtistas as $topArtista){
-            $eventos = find('evento', $topArtista->getNome());
+            $eventos = find($conn, 'evento', $topArtista->getNome());
             if($eventos!=null){
                 foreach($eventos as $evento){
                     $show = New Evento($evento);
@@ -72,24 +76,31 @@ class Usuario
                     $i++;    
                 }
             }
-            foreach($topArtista->getAssociados() as $associado){
-                $eventos = find('evento', $associado);
-                if($eventos!=null){
-                    foreach($eventos as $evento){
-                        $show = new Evento($evento);
-                        $this->recomendacoes[$i]['Evento'] = $show;
-                        $this->recomendacoes[$i]['Artista'] = $topArtista->getNome();
-                        $this->recomendacoes[$i]['Associado'] = $evento['Artista'];
-                        $i++;    
+            if($topArtista->getAssociados()!=null){
+               foreach($topArtista->getAssociados() as $associado){
+                    
+                    $eventos = find($conn, 'evento', $associado);
+                    if($eventos!=null){
+                        foreach($eventos as $evento){
+                            $show = new Evento($evento);
+                            $this->recomendacoes[$i]['Evento'] = $show;
+                            $this->recomendacoes[$i]['Artista'] = $topArtista->getNome();
+                            $this->recomendacoes[$i]['Associado'] = $evento['Artista'];
+                            $i++;    
+                        }
                     }
-                }
+                } 
             }
-
         }
+        close_database($conn);   
     }
 
     public function getRecomendacoes(){
         return $this->recomendacoes;
+    }
+
+    public function getTop(){
+        return $this->topArtistas;
     }
 
      /**
