@@ -66,7 +66,7 @@ function find($conn, $table = null, $id = null, $what = null ) {
 	 	} else {
 
 		    $sql = "SELECT * FROM " . $table;
-		    $result = $database->query($sql);
+		    $result = $conn->query($sql);
 	    	if ($result->num_rows > 0) {
 	      		$found = $result->fetch_all(MYSQLI_ASSOC);
 	      	}
