@@ -81,7 +81,7 @@ class Artista
         unset($dados);
         if(isset($associados)){
             foreach($associados as $associado){
-                $procura = find('artista', $associado);
+                $procura = find($conn, 'artista', $associado);
                 if($procura==null){
                     $dados['Nome'] = $associado;
                     save($conn, 'artista', $dados);

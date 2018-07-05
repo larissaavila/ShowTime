@@ -50,11 +50,12 @@ class Usuario
                     foreach($json['items'][$i]['genres'] as $genero){
                         $generos[] = $genero;
                     }
+                    $artista = new Artista($json['items'][$i]['name']);
                     if(isset($generos)){
-                        insereArtista($conn, $json['items'][$i]['name'], $generos);
+                        $artista->insereArtista($conn, $json['items'][$i]['name'], $generos);
                     }
                     else{
-                        insereArtista($conn, $json['items'][$i]['name'], null);
+                        $artista->insereArtista($conn, $json['items'][$i]['name'], null);
                     }
                     unset($generos);
                 }

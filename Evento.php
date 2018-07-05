@@ -7,7 +7,7 @@
  * @version 1.0
  * @package ShowTime
  */
-require_once 'Artisa.php';
+require_once 'Artista.php';
 class Evento
 {
 	/**
@@ -49,7 +49,7 @@ class Evento
         $dados['Artista'] = $artista;
 
         save($conn, 'evento', $dados);
-};
+    }
 
 }
 
