@@ -69,7 +69,6 @@ $db = sparql_connect('http://dbpedia.org/sparql/'); #Conecta com a DBpedia
 		$query .= queryEspecial($recurso);
 		$query .= "?recurso dbo:genre ?genero .
 		          ?genero foaf:name ?genreName}";
-		echo $query, "<br>";
 		$result = sparql_query($query);
         $fields = sparql_field_array($result);
         while($row = sparql_fetch_array($result)){
@@ -90,7 +89,6 @@ $db = sparql_connect('http://dbpedia.org/sparql/'); #Conecta com a DBpedia
 		                    UNION
 		          	   {?recurso dbo:birthPlace ?hometown} .
 		          	   ?hometown foaf:name ?homeName}";
-		echo $query, "<br>";
 		$result = sparql_query($query);
 		$fields = sparql_field_array($result);
 		while($row = sparql_fetch_array($result)){
@@ -107,7 +105,6 @@ $db = sparql_connect('http://dbpedia.org/sparql/'); #Conecta com a DBpedia
 			$recurso = str_replace("'", "\'", $recurso);
 		$query .= queryEspecial($recurso);
 		$query .= "?recurso dbo:activeYearsStartYear ?year}";
-		echo $query, "<br>";
 		$result = sparql_query($query);
 		$fields = sparql_field_array($result);
 		while($row = sparql_fetch_array($result)){
@@ -179,7 +176,6 @@ $db = sparql_connect('http://dbpedia.org/sparql/'); #Conecta com a DBpedia
 		         FILTER(?genreAssoc = ?genre && ?genreAssoc2 = ?genre && ?associado != ?recurso && ?associado2 != ?recurso)
 		         ?associado foaf:name ?associadoNome .
 		         ?associado2 foaf:name ?associado2Nome}";
-		echo $query, "<br>";
 		$result = sparql_query($query);
 		$fields = sparql_field_array($result);
 		while($row = sparql_fetch_array($result)){
@@ -207,7 +203,6 @@ $db = sparql_connect('http://dbpedia.org/sparql/'); #Conecta com a DBpedia
 		          ?parecidoGenero dbo:activeYearsStartYear ?anoParecido
 		              FILTER(year(?anoParecido) >= (year(?ano)-5) && year(?anoParecido) <= (year(?ano)+5) && ?parecidoGenero != ?recurso)
 		          ?parecidoGenero foaf:name ?parecidoNome}";
-		echo $query, "<br>";
 		$result = sparql_query($query);
 		$fields = sparql_field_array($result);
 		while($row = sparql_fetch_array($result)){

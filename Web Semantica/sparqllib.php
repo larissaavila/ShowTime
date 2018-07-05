@@ -400,7 +400,7 @@ class xx_xml {
 	var $type;
 
 	// function with the default parameter value
-	function __xx_xml($url='http://www.opocot.com', $type='url') {
+	function xx_xml($url='http://www.opocot.com', $type='url') {
 		$this->type = $type;
 		$this->url  = $url;
 		$this->parse();
