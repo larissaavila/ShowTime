@@ -7,6 +7,7 @@
  * @version 1.0
  * @package ShowTime
  */
+require_once 'Artisa.php';
 class Evento
 {
 	/**
@@ -35,6 +36,20 @@ class Evento
         $this->Artista = $evento['Artista'];
 
     }
+
+    public function insereEvento($conn, $nome, $local, $data, $descricao, $artista){
+        $procura = find($conn, 'artista', $artista);
+        if($procura==null){
+            insereArtista($conn, $artista, null);
+        }
+        $dados['Nome'] = $nome;
+        $dados['Local'] = $local;
+        $dados['Data'] = $data;
+        $dados['Descricao'] = $descricao;
+        $dados['Artista'] = $artista;
+
+        save($conn, 'evento', $dados);
+};
 
 }
 

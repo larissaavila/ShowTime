@@ -7,8 +7,8 @@
  * @version 1.0
  * @package ShowTime
  */
-include 'sparql.php';
-include 'database.php';
+require_once 'Web Semantica\consultas_sparql.php';
+require_once 'Banco de Dados\database.php';
 class Artista
 {
 	/**
@@ -30,6 +30,69 @@ class Artista
     public function __construct($nome) {
         $this->nome = $nome;
 
+    }
+
+    public function insereArtista($conn, $nome, $genres){
+        if(existeRecurso($nome)){
+            $generos = achaGeneros($nome);
+            $locais = achaLocal($nome);
+            $ano = achaAno($nome);
+            $associados = achaAssociados($nome);
+            //$parecidos = achaParecidosGenero($aux);
+        }
+        $procura = find($conn, 'artista', $nome);
+        if($procura!=null){
+            if(isset($ano)){
+                $dados['anoInicio'] = $ano;
+                update($conn, 'artista', $nome, $dados);
+                unset($dados);  
+            }
+        }
+        else{
+            $dados['Nome'] = $nome;
+            if(isset($ano))
+                $dados['anoInicio'] = $ano;
+            save($conn, 'artista', $dados);
+            unset($dados);
+        }
+        $dados['Nome'] = $nome;
+        if(isset($genres)){
+            foreach($genres as $genre){
+                $dados['Genero'] = $genre;
+                save($conn, 'possuigenero', $dados); //Salva generos do Spotify
+            }
+        }
+        unset($dados);
+        $dados['Nome'] = $nome;
+        if(isset($generos)){
+            foreach($generos as $genero){
+                $dados['Genero'] = $genero;
+                save($conn, 'possuigenero', $dados); //Salva generos da DBPedia
+            }
+        }    
+        unset($dados);
+        $dados['Nome'] = $nome;
+        if(isset($locais)){
+            foreach($locais as $local){
+                $dados['Local'] = $local;
+                save($conn, 'possuilocal', $dados);
+            }
+        }
+        unset($dados);
+        if(isset($associados)){
+            foreach($associados as $associado){
+                $procura = find('artista', $associado);
+                if($procura==null){
+                    $dados['Nome'] = $associado;
+                    save($conn, 'artista', $dados);
+                    unset($dados);
+                }
+                $dados['A'] = $nome;
+                $dados['B'] = $associado;
+                save($conn, 'associado', $dados);
+                unset($dados);
+            }
+        }           
     }
 
     public function carrega($conn){

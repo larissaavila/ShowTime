@@ -1,0 +1,121 @@
+﻿{
+  "items": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1AL2GKpmRrKXkYIcASuRFa"
+      },
+      "followers": {
+        "href": null,
+        "total": 4809659
+      },
+      "genres": [
+        "forro"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1AL2GKpmRrKXkYIcASuRFa",
+      "id": "1AL2GKpmRrKXkYIcASuRFa",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/250efcc5806580e8b801659984c242a8bbd725e6",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/e2ba94f7a21100a594ae96616fbb2cc48ea9ab59",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/c8317ad9e5ef54c14c36e61b84bf5b5f58c1410c",
+          "width": 160
+        }
+      ],
+      "name": "Wesley Safadão",
+      "popularity": 80,
+      "type": "artist",
+      "uri": "spotify:artist:1AL2GKpmRrKXkYIcASuRFa"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2FrLTuXGuFDzQsjKidB03W"
+      },
+      "followers": {
+        "href": null,
+        "total": 1274811
+      },
+      "genres": [
+        "sertanejo",
+        "sertanejo pop",
+        "sertanejo universitario"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2FrLTuXGuFDzQsjKidB03W",
+      "id": "2FrLTuXGuFDzQsjKidB03W",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/55840df7c869e8843a693f34c7b585b523cafc2f",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/83a27522ee4b0dd3c5fe948c5df11ffbaa5224d0",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/534846e677b330de9d4a00c9ca5b57ffacd973c8",
+          "width": 160
+        }
+      ],
+      "name": "João Neto & Frederico",
+      "popularity": 66,
+      "type": "artist",
+      "uri": "spotify:artist:2FrLTuXGuFDzQsjKidB03W"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/51flkVmoTWBYSH8U6dgKqL"
+      },
+      "followers": {
+        "href": null,
+        "total": 61914
+      },
+      "genres": [
+        "axe",
+        "forro",
+        "pagode",
+        "sertanejo",
+        "sertanejo universitario"
+      ],
+      "href": "https://api.spotify.com/v1/artists/51flkVmoTWBYSH8U6dgKqL",
+      "id": "51flkVmoTWBYSH8U6dgKqL",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/d6dc7ae33765e36c2bf6e3f28b1633ab377a2c10",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/88bb0c662cec096140dce9c430a541721e2e91c1",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ef16ab36e6dde1c77967a6a5c028af431a276460",
+          "width": 64
+        }
+      ],
+      "name": "Bonde do Forró",
+      "popularity": 43,
+      "type": "artist",
+      "uri": "spotify:artist:51flkVmoTWBYSH8U6dgKqL"
+    }
+  ],
+  "total": 3,
+  "limit": 30,
+  "offset": 0,
+  "href": "https://api.spotify.com/v1/me/top/artists?limit=30&offset=0&time_range=short_term",
+  "previous": null,
+  "next": null
+}

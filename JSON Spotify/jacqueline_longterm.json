@@ -1,0 +1,701 @@
+{
+  "items": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3f5VCwd57gZsqMad28jyLV"
+      },
+      "followers": {
+        "href": null,
+        "total": 265545
+      },
+      "genres": [
+        "baile pop",
+        "bossa nova",
+        "forro",
+        "mpb",
+        "samba"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3f5VCwd57gZsqMad28jyLV",
+      "id": "3f5VCwd57gZsqMad28jyLV",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/460980ede83ccd29ca6ec8bab41b1dec4b501bc6",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/7969f62e586401cbfb724f8b6d36f2fc9f65053a",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/a77b4160a5b136af7a275e2f930a7158b73b31a3",
+          "width": 160
+        }
+      ],
+      "name": "Maria Bethânia",
+      "popularity": 62,
+      "type": "artist",
+      "uri": "spotify:artist:3f5VCwd57gZsqMad28jyLV"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6ODCVWBfGNFUf1bpo0c2Ge"
+      },
+      "followers": {
+        "href": null,
+        "total": 392834
+      },
+      "genres": [
+        "baile pop",
+        "brazilian hip hop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6ODCVWBfGNFUf1bpo0c2Ge",
+      "id": "6ODCVWBfGNFUf1bpo0c2Ge",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/936d5ff7be8709fa809234e0e0a5d292f1be963f",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/77e9bd5391dfe0ed4a723f69f75d508b02827c70",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/2aad97742e5ddc3a01dc8a1f898bd78bf3aa31d3",
+          "width": 160
+        }
+      ],
+      "name": "Karol Conká",
+      "popularity": 57,
+      "type": "artist",
+      "uri": "spotify:artist:6ODCVWBfGNFUf1bpo0c2Ge"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+      },
+      "followers": {
+        "href": null,
+        "total": 13404037
+      },
+      "genres": [
+        "dance pop",
+        "pop",
+        "post-teen pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+      "id": "06HL4z0CvFAxyc27GXpf02",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/bdaeccb035a8af87b7a70b62217ff5c633ba6c7c",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/cec43c2fb746ea2a0c7546aa3408fe2f94887fe4",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/33bc9128ad82f7d39847b6db6a49d5416502e7e7",
+          "width": 160
+        }
+      ],
+      "name": "Taylor Swift",
+      "popularity": 90,
+      "type": "artist",
+      "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5Znx4PG5UsUitigaJnmZX3"
+      },
+      "followers": {
+        "href": null,
+        "total": 259717
+      },
+      "genres": [
+        "baile pop",
+        "brazilian hip hop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/5Znx4PG5UsUitigaJnmZX3",
+      "id": "5Znx4PG5UsUitigaJnmZX3",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/1601ad553660d1687e86276772c24b1e2d3b4934",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/38766526ec8cf46500887d6875a8e9e70238b8e9",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/76f63f123ae900885b6622a18d9d85c07e5ca4e5",
+          "width": 160
+        }
+      ],
+      "name": "Flora Matos",
+      "popularity": 57,
+      "type": "artist",
+      "uri": "spotify:artist:5Znx4PG5UsUitigaJnmZX3"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3qZ2n5keOAat1SoF6bHwmb"
+      },
+      "followers": {
+        "href": null,
+        "total": 294214
+      },
+      "genres": [
+        "axe",
+        "forro",
+        "mpb",
+        "pagode",
+        "samba"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3qZ2n5keOAat1SoF6bHwmb",
+      "id": "3qZ2n5keOAat1SoF6bHwmb",
+      "images": [
+        {
+          "height": 639,
+          "url": "https://i.scdn.co/image/19fbc6f08e58d7bc320b6cbc857605186442ed5b",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/c8ebd68dd261e6c0f870ca25ebd4a96c4a09b0a6",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/a10a1c7caa816ca6845180e1d64f069c83553da8",
+          "width": 160
+        }
+      ],
+      "name": "Zeca Pagodinho",
+      "popularity": 62,
+      "type": "artist",
+      "uri": "spotify:artist:3qZ2n5keOAat1SoF6bHwmb"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7CQwac16i1W5ej8YpuL3dv"
+      },
+      "followers": {
+        "href": null,
+        "total": 1885326
+      },
+      "genres": [
+        "neo mellow",
+        "pop",
+        "pop rock",
+        "viral pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/7CQwac16i1W5ej8YpuL3dv",
+      "id": "7CQwac16i1W5ej8YpuL3dv",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/607758d6f4fa70670024531ce197588a4761b742",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/eb243f004a9cbf8707db70a9430a02fb1bc1ec16",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/a9403a3d19170a1f5acaa4cf054a38187f5e945a",
+          "width": 160
+        }
+      ],
+      "name": "Boyce Avenue",
+      "popularity": 77,
+      "type": "artist",
+      "uri": "spotify:artist:7CQwac16i1W5ej8YpuL3dv"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3DiDSECUqqY1AuBP8qtaIa"
+      },
+      "followers": {
+        "href": null,
+        "total": 4598029
+      },
+      "genres": [
+        "hip pop",
+        "neo soul",
+        "pop",
+        "r&b",
+        "urban contemporary"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3DiDSECUqqY1AuBP8qtaIa",
+      "id": "3DiDSECUqqY1AuBP8qtaIa",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/05e25d030a1caa1611b1e7248d89b557d9867258",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/9f467fa88387a3cbe6d9d15e2d6d6c47118fa8cb",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/185aa5e7ce1bc7c1707762932f7b8d298c4c09ef",
+          "width": 160
+        }
+      ],
+      "name": "Alicia Keys",
+      "popularity": 79,
+      "type": "artist",
+      "uri": "spotify:artist:3DiDSECUqqY1AuBP8qtaIa"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/317yGDHMNsNQMfjsNNPYUg"
+      },
+      "followers": {
+        "href": null,
+        "total": 46469
+      },
+      "genres": [
+        "baile pop",
+        "brazilian rock",
+        "mpb"
+      ],
+      "href": "https://api.spotify.com/v1/artists/317yGDHMNsNQMfjsNNPYUg",
+      "id": "317yGDHMNsNQMfjsNNPYUg",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/bcb0d043dec810dbc0873dabe97f52dc64bf7d16",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/a99da373218778bbaac9e58f1f76b1c1a219e969",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/1310568dfe5d72b9ae7478c796ea1d2924d8d8e1",
+          "width": 64
+        }
+      ],
+      "name": "Francisco el Hombre",
+      "popularity": 49,
+      "type": "artist",
+      "uri": "spotify:artist:317yGDHMNsNQMfjsNNPYUg"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0jOs0wnXCu1bGGP7kh5uIu"
+      },
+      "followers": {
+        "href": null,
+        "total": 408870
+      },
+      "genres": [
+        "bossa nova",
+        "brazilian rock",
+        "mpb",
+        "pagode",
+        "samba"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0jOs0wnXCu1bGGP7kh5uIu",
+      "id": "0jOs0wnXCu1bGGP7kh5uIu",
+      "images": [
+        {
+          "height": 346,
+          "url": "https://i.scdn.co/image/362b9cdacfd0b589a3ab11195afad0a5459404dc",
+          "width": 462
+        },
+        {
+          "height": 150,
+          "url": "https://i.scdn.co/image/0a14ab8ade5171afe567961f8794488da02e0170",
+          "width": 200
+        },
+        {
+          "height": 48,
+          "url": "https://i.scdn.co/image/fd8e2f2668ec24324464049822c6e02ab674fb08",
+          "width": 64
+        }
+      ],
+      "name": "Tim Maia",
+      "popularity": 59,
+      "type": "artist",
+      "uri": "spotify:artist:0jOs0wnXCu1bGGP7kh5uIu"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0Je74SitssvJg1w4Ra2EK7"
+      },
+      "followers": {
+        "href": null,
+        "total": 156864
+      },
+      "genres": [
+        "new wave pop",
+        "pop rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0Je74SitssvJg1w4Ra2EK7",
+      "id": "0Je74SitssvJg1w4Ra2EK7",
+      "images": [
+        {
+          "height": 775,
+          "url": "https://i.scdn.co/image/3cd1494789e29fbc85793f633def0ff7915c5872",
+          "width": 1000
+        },
+        {
+          "height": 496,
+          "url": "https://i.scdn.co/image/13e9c39d841e62fe0f5548ffb4ee1df78fc3e82e",
+          "width": 640
+        },
+        {
+          "height": 155,
+          "url": "https://i.scdn.co/image/2584f5cd08b11891b929938939d5bc686f0d9aeb",
+          "width": 200
+        },
+        {
+          "height": 50,
+          "url": "https://i.scdn.co/image/5466270611fa6d6e7301fee2921ea9f25e26f47a",
+          "width": 64
+        }
+      ],
+      "name": "4 Non Blondes",
+      "popularity": 66,
+      "type": "artist",
+      "uri": "spotify:artist:0Je74SitssvJg1w4Ra2EK7"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0du5cEVh5yTK9QJze8zA0C"
+      },
+      "followers": {
+        "href": null,
+        "total": 14210872
+      },
+      "genres": [
+        "pop",
+        "post-teen pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0du5cEVh5yTK9QJze8zA0C",
+      "id": "0du5cEVh5yTK9QJze8zA0C",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/aa32d6d4ca2467974403518dd3ebfe8831c5ced1",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/63cad86cb183568085a4e5f0be86aa187cc511e4",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/5461dcbb3f23e1df62d85c8273fc49cc4edd49d5",
+          "width": 160
+        }
+      ],
+      "name": "Bruno Mars",
+      "popularity": 89,
+      "type": "artist",
+      "uri": "spotify:artist:0du5cEVh5yTK9QJze8zA0C"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2DlGxzQSjYe5N6G9nkYghR"
+      },
+      "followers": {
+        "href": null,
+        "total": 4885056
+      },
+      "genres": [
+        "dance pop",
+        "pop",
+        "pop rap",
+        "post-teen pop",
+        "r&b",
+        "urban contemporary"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2DlGxzQSjYe5N6G9nkYghR",
+      "id": "2DlGxzQSjYe5N6G9nkYghR",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/d4e68eb003d4b5cb7dbf7b505791f9c74b6b648f",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/db739ab245ad6504c53f4da269525a6edafd3730",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/86229155aa5e5d0fd2bfb9f47484c6435f6963c7",
+          "width": 160
+        }
+      ],
+      "name": "Jennifer Lopez",
+      "popularity": 81,
+      "type": "artist",
+      "uri": "spotify:artist:2DlGxzQSjYe5N6G9nkYghR"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3zgnrYIltMkgeejmvMCnes"
+      },
+      "followers": {
+        "href": null,
+        "total": 710922
+      },
+      "genres": [
+        "baile pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3zgnrYIltMkgeejmvMCnes",
+      "id": "3zgnrYIltMkgeejmvMCnes",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/a01fb1d02b03e9a6eafd0abdce67c1a45b906eca",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/fa658dc20a009da70e59c1df6425bd9cb5d82e6e",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/dfd04a4b0381d694c6ebc9f10abc5e9bcd611e3d",
+          "width": 160
+        }
+      ],
+      "name": "IZA",
+      "popularity": 67,
+      "type": "artist",
+      "uri": "spotify:artist:3zgnrYIltMkgeejmvMCnes"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1cjZk1xXn3YCToNg3uJpA7"
+      },
+      "followers": {
+        "href": null,
+        "total": 92426
+      },
+      "genres": [
+        "brill building pop",
+        "classic soul",
+        "motown",
+        "rhythm and blues",
+        "soul",
+        "southern soul"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1cjZk1xXn3YCToNg3uJpA7",
+      "id": "1cjZk1xXn3YCToNg3uJpA7",
+      "images": [
+        {
+          "height": 1055,
+          "url": "https://i.scdn.co/image/14925be3ce17d25a95b95ae7491e18fe3adc80b0",
+          "width": 1000
+        },
+        {
+          "height": 675,
+          "url": "https://i.scdn.co/image/fed0bcddab6cdd1faad304275c46bb5329d613e2",
+          "width": 640
+        },
+        {
+          "height": 211,
+          "url": "https://i.scdn.co/image/74fec76f5c7b957f4263752c896f93ed5ef293ac",
+          "width": 200
+        },
+        {
+          "height": 68,
+          "url": "https://i.scdn.co/image/89224e4fd203783e6a04ecb6151823c9816a7c32",
+          "width": 64
+        }
+      ],
+      "name": "Mary Wells",
+      "popularity": 56,
+      "type": "artist",
+      "uri": "spotify:artist:1cjZk1xXn3YCToNg3uJpA7"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3plJVWt88EqjvtuB4ZDRV3"
+      },
+      "followers": {
+        "href": null,
+        "total": 189458
+      },
+      "genres": [
+        "adult standards",
+        "brill building pop",
+        "christmas",
+        "motown",
+        "rock-and-roll",
+        "rockabilly",
+        "soul",
+        "southern soul"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3plJVWt88EqjvtuB4ZDRV3",
+      "id": "3plJVWt88EqjvtuB4ZDRV3",
+      "images": [
+        {
+          "height": 1185,
+          "url": "https://i.scdn.co/image/22c8cd28a71661b4dbd462e2d45b04b3e1b78572",
+          "width": 1000
+        },
+        {
+          "height": 758,
+          "url": "https://i.scdn.co/image/7acecc812be1bfff5c86e12fa96d22a99a69ca0c",
+          "width": 640
+        },
+        {
+          "height": 237,
+          "url": "https://i.scdn.co/image/48e0bc961b3644ff379274161608e99dae724ac9",
+          "width": 200
+        },
+        {
+          "height": 76,
+          "url": "https://i.scdn.co/image/a39ccfe63434e7a48f0037007746264bf8c0f19c",
+          "width": 64
+        }
+      ],
+      "name": "Ben E. King",
+      "popularity": 67,
+      "type": "artist",
+      "uri": "spotify:artist:3plJVWt88EqjvtuB4ZDRV3"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0yb46jwm7gqbZXVXZQ8Z1e"
+      },
+      "followers": {
+        "href": null,
+        "total": 264053
+      },
+      "genres": [
+        "electropop",
+        "modern alternative rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0yb46jwm7gqbZXVXZQ8Z1e",
+      "id": "0yb46jwm7gqbZXVXZQ8Z1e",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/1c356a15ac9e45129fa826d72655f3f0ed271572",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/0d99c4cffaca4b564ee75771176a5dcf473ceeaf",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/1ebac8f3322e688fca556fab31f696b879dd2fbe",
+          "width": 160
+        }
+      ],
+      "name": "Bishop Briggs",
+      "popularity": 71,
+      "type": "artist",
+      "uri": "spotify:artist:0yb46jwm7gqbZXVXZQ8Z1e"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5ZtyHkAGvYFPSYcWPfmL5n"
+      },
+      "followers": {
+        "href": null,
+        "total": 157655
+      },
+      "genres": [
+        "baile pop",
+        "mpb"
+      ],
+      "href": "https://api.spotify.com/v1/artists/5ZtyHkAGvYFPSYcWPfmL5n",
+      "id": "5ZtyHkAGvYFPSYcWPfmL5n",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/4ce6e879afc10c34c192022d9a32f829c5646289",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/564dc197e8b0cb468565a88b62b758af36ca12f3",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/39a0ccfca8a7c49405ec267f931a546c52abf351",
+          "width": 160
+        }
+      ],
+      "name": "Liniker e os Caramelows",
+      "popularity": 55,
+      "type": "artist",
+      "uri": "spotify:artist:5ZtyHkAGvYFPSYcWPfmL5n"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7rXMvXRnWHaSwnVvPeUUfw"
+      },
+      "followers": {
+        "href": null,
+        "total": 114209
+      },
+      "genres": [
+        "baile pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/7rXMvXRnWHaSwnVvPeUUfw",
+      "id": "7rXMvXRnWHaSwnVvPeUUfw",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/e15435e954b9975cc4267d672008802081e4a4e6",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/90754bde170d01577fd6ad63c10edb1a77b7aacc",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/3f754f85c217e5af76199c634583fcf12f1561bd",
+          "width": 160
+        }
+      ],
+      "name": "Gloria Groove",
+      "popularity": 63,
+      "type": "artist",
+      "uri": "spotify:artist:7rXMvXRnWHaSwnVvPeUUfw"
+    }
+  ],
+  "total": 18,
+  "limit": 30,
+  "offset": 0,
+  "href": "https://api.spotify.com/v1/me/top/artists?limit=30&offset=0&time_range=long_term",
+  "previous": null,
+  "next": null
+}

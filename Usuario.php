@@ -7,8 +7,8 @@
  * @version 1.0
  * @package ShowTime
  */
-include 'Artista.php';
-include 'Evento.php';
+require_once 'Artista.php';
+require_once 'Evento.php';
 class Usuario
 {
     /**
@@ -26,6 +26,45 @@ class Usuario
      * @access public
      */
     public function __construct() {
+    }
+
+    public function lerUsuario($caminho, $login, $nome){
+        $conn = open_database();
+        $procura = find($conn, 'usuario', $login);
+        if($procura!=null){
+            echo "Usuário já cadastrado";
+        }
+        else{
+            $string = file_get_contents($caminho);
+            $json = json_decode($string, true);
+            //echo '<pre>' . print_r($json, true) . '</pre>'; //Interessante para ver o formato do JSON
+            $dados['Login'] = $login;
+            $dados['Nome'] = $nome;
+
+            save($conn, 'usuario', $dados);
+            unset($dados);
+            for($i=0;$i<10;$i++){
+                $name = $json['items'][$i]['name'];
+                $procura = find($conn, 'gosta', $name, 1);
+                if($procura==null){
+                    foreach($json['items'][$i]['genres'] as $genero){
+                        $generos[] = $genero;
+                    }
+                    if(isset($generos)){
+                        insereArtista($conn, $json['items'][$i]['name'], $generos);
+                    }
+                    else{
+                        insereArtista($conn, $json['items'][$i]['name'], null);
+                    }
+                    unset($generos);
+                }
+                $dados['Login'] = $login;
+                $dados['Nome'] = $json['items'][$i]['name'];
+                save($conn, 'gosta', $dados);
+            }
+        }
+        close_database($conn);
+
     }
 
      /**
