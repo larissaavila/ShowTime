@@ -84,7 +84,7 @@ class Artista
                 $procura = find($conn, 'artista', $associado);
                 if($procura==null){
                     $dados['Nome'] = $associado;
-                    save($conn, 'artista', $dados);
+                    save($conn, 'artista', $dados); 
                     unset($dados);
                 }
                 $dados['A'] = $nome;
@@ -133,6 +133,15 @@ class Artista
         return $this->associados;
     }
 
+    public function setImage($conn, $link){
+        $this->imagem = $link;
+        $dados['Imagem'] = $link;
+        update($conn, 'artista', $this->nome, $dados);
+    }
+
+    public function getImage(){
+        return $this->imagem;
+    }
 
 }
 

@@ -85,6 +85,7 @@ class Usuario
         }
         else{
             $this->nome = $procura[0]['Nome'];
+            $this->recomendacoes = null;
             $procura = find($conn, 'gosta', $login, 0);
             if($procura==null){
                 echo "Erro: usuário não possui artistas na tabela gosta";
@@ -111,7 +112,7 @@ class Usuario
                 foreach($eventos as $evento){
                     $show = New Evento($evento);
                     $this->recomendacoes[$i]['Evento'] = $show;
-                    $this->recomendacoes[$i]['Artista'] = $evento['Artista'];
+                    $this->recomendacoes[$i]['Artista'] = $topArtista;
                     $this->recomendacoes[$i]['Associado'] = null;
                     $i++;    
                 }
@@ -124,7 +125,7 @@ class Usuario
                         foreach($eventos as $evento){
                             $show = new Evento($evento);
                             $this->recomendacoes[$i]['Evento'] = $show;
-                            $this->recomendacoes[$i]['Artista'] = $topArtista->getNome();
+                            $this->recomendacoes[$i]['Artista'] = $topArtista;
                             $this->recomendacoes[$i]['Associado'] = $evento['Artista'];
                             $i++;    
                         }

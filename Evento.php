@@ -51,6 +51,10 @@ class Evento
         save($conn, 'evento', $dados);
     }
 
+    public function getNome(){
+        return $this->nome;
+    }
+
 }
 
 ?>
