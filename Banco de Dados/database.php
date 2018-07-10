@@ -41,22 +41,22 @@ function find($conn, $table = null, $id = null, $what = null ) {
 		  	$sql = "SELECT * FROM " . $table;
 
 		  	if($table == "artista" || $table == "possuigenero" || $table == "possuilocal"){
-		  		$sql .= " WHERE Nome LIKE '%$id%'";
+		  		$sql .= " WHERE Nome LIKE '$id'";
 		  	}
 		  	elseif($table == "usuario"){
-		  		$sql .= " WHERE Login LIKE '%$id%'";
+		  		$sql .= " WHERE Login LIKE '$id'";
 		  	}
 	      	elseif($table == "gosta"){
 	        	if($what == 0)
-	          		$sql .= " WHERE Login LIKE '%$id%'";
+	          		$sql .= " WHERE Login LIKE '$id'";
 	        	else
-	          		$sql .= " WHERE Nome LIKE '%$id%'";
+	          		$sql .= " WHERE Nome LIKE '$id'";
 	      	}
 	      	elseif($table == "evento"){
-	      		$sql .= " WHERE Artista LIKE '%$id%'";
+	      		$sql .= " WHERE Artista LIKE '$id'";
 	       	}
 		  	else{
-		  		$sql .= " WHERE A LIKE '%$id%'";
+		  		$sql .= " WHERE A LIKE '$id'";
 		  	}
 		    $result = $conn->query($sql);
 
@@ -152,13 +152,13 @@ function update($conn, $table = null, $id = 0, $data = null) {
   	$sql  = "UPDATE " . $table;
   	$sql .= " SET $items";
   	if($table == "artista" || $table == "possuigenero" || $table == "possuilocal" || $table == "evento")
-		$sql .=" WHERE Nome LIKE '%$id%'";
+		$sql .=" WHERE Nome LIKE '$id'";
 
   	elseif($table == "usuario" || $table == "gosta")
-  		$sql .=" WHERE Login LIKE '%$id%'";
+  		$sql .=" WHERE Login LIKE '$id'";
 
   	else
-		$sql .=" WHERE A LIKE '%$id%'";
+		$sql .=" WHERE A LIKE '$id'";
 
   	try {
 	    $conn->query($sql);
@@ -194,25 +194,25 @@ function update($conn, $table = null, $id = 0, $data = null) {
 
       if($table == "atestadomatricula"){
 
-      	$sql .= " WHERE NUMMATRICULA LIKE '%$id%'";
+      	$sql .= " WHERE NUMMATRICULA LIKE '$id'";
 
       }
 
       elseif($table == "listabolsistas"){
 
-      	$sql .= " WHERE CPF LIKE '%$id%'";
+      	$sql .= " WHERE CPF LIKE '$id'";
 
       }
 
       else{
 
-      	$sql .= " WHERE EMAIL LIKE '%$id%'";
+      	$sql .= " WHERE EMAIL LIKE '$id'";
 
       }
 
 
 
-      //$sql = "DELETE FROM " . $table . " WHERE EMAIL LIKE '%$id%'";
+      //$sql = "DELETE FROM " . $table . " WHERE EMAIL LIKE '$id'";
 
       $result = $database->query($sql);
 
