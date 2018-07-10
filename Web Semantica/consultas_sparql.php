@@ -6,6 +6,10 @@ $db = sparql_connect('http://dbpedia.org/sparql/'); #Conecta com a DBpedia
 
 	function queryEspecial($nome){
 		$contem = $nome;
+		if(strpos($nome, "'")){
+			$nome = str_replace("'", "\'", $nome);
+			$contem = str_replace("'", "\\\\'", $contem);
+		}
 		$contem = retiraAcentos($contem);
 		$nome = mb_strtolower($nome, 'UTF-8');
 		$nome = insereUnicode($nome);
@@ -64,8 +68,6 @@ $db = sparql_connect('http://dbpedia.org/sparql/'); #Conecta com a DBpedia
 	function achaGeneros($recurso){
 		$lista = array();
 		$query = "SELECT DISTINCT ?genreName WHERE{";
-		if(strpos($recurso, "'"))
-			$recurso = str_replace("'", "\'", $recurso);
 		$query .= queryEspecial($recurso);
 		$query .= "?recurso dbo:genre ?genero .
 		          ?genero foaf:name ?genreName}";
@@ -82,8 +84,6 @@ $db = sparql_connect('http://dbpedia.org/sparql/'); #Conecta com a DBpedia
 	function achaLocal($recurso){
 		$lista = array();
 		$query = "SELECT DISTINCT ?homeName WHERE{";
-		if(strpos($recurso, "'"))
-			$recurso = str_replace("'", "\'", $recurso);
 		$query .= queryEspecial($recurso);
 		$query .= "{?recurso dbo:hometown ?hometown}
 		                    UNION
@@ -101,8 +101,6 @@ $db = sparql_connect('http://dbpedia.org/sparql/'); #Conecta com a DBpedia
 
 	function achaAno($recurso){
 		$query = "SELECT DISTINCT ?year WHERE{";
-		if(strpos($recurso, "'"))
-			$recurso = str_replace("'", "\'", $recurso);
 		$query .= queryEspecial($recurso);
 		$query .= "?recurso dbo:activeYearsStartYear ?year}";
 		$result = sparql_query($query);
@@ -149,8 +147,6 @@ $db = sparql_connect('http://dbpedia.org/sparql/'); #Conecta com a DBpedia
 	function achaAssociados($recurso){
 		$lista = array();
 		$query = "SELECT DISTINCT ?associadoNome ?associado2Nome WHERE{";
-		if(strpos($recurso, "'"))
-			$recurso = str_replace("'", "\'", $recurso);
 		$query .= queryEspecial($recurso);
 		$query .= "?recurso dbo:genre ?genre .
 		         
