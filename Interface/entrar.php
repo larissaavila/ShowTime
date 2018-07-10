@@ -1,4 +1,5 @@
-<?php session_start(); ?>
+<?php if(session_status()!=PHP_SESSION_ACTIVE)
+          session_start(); ?>
 <?php require_once 'index.php'; ?>
 
 <?php 
@@ -9,7 +10,8 @@
 			header("Location: indexUser.php");
 		}
 		else{
-			echo "não logou";
+			$_SESSION['message'] = "Login não encontrado";
+			$_SESSION['type'] = "danger";
 		}
 
 	}
@@ -19,6 +21,16 @@
 <link href="css/signin.css" rel="stylesheet">
 
 <div class="container">
+	<div class="row">
+
+<?php if (!empty($_SESSION['message'])) : ?>
+		<div class="alert alert-<?php echo $_SESSION['type']; ?> alert-dismissible col-md-2 col-md-offset-5" role="alert" align="center">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<?php echo $_SESSION['message']; ?>
+		</div>
+	<?php clear_messages(); ?>
+<?php endif; ?>
+
 	<form class="form-signin" method="post">
 		<label for="login" class="sr-only">Login</label>
 		<input type="text" id="login" name="login" class="form-control" placeholder="Login" required="" autofocus="">
