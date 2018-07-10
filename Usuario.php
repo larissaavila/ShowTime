@@ -28,11 +28,11 @@ class Usuario
     public function __construct() {
     }
 
-    public function lerUsuario($caminho, $login, $nome){
+    public function cadastrarUsuario($caminho, $login, $nome){
         $conn = open_database();
         $procura = find($conn, 'usuario', $login);
         if($procura!=null){
-            echo "Usuário já cadastrado";
+            $retorno = null;
         }
         else{
             $string = file_get_contents($caminho);
@@ -45,26 +45,29 @@ class Usuario
             unset($dados);
             for($i=0;$i<10;$i++){
                 $name = $json['items'][$i]['name'];
+                $image = $json['items'][$i]['images'][1]['url'];
                 $procura = find($conn, 'gosta', $name, 1);
                 if($procura==null){
                     foreach($json['items'][$i]['genres'] as $genero){
                         $generos[] = $genero;
                     }
-                    $artista = new Artista($json['items'][$i]['name']);
+                    $artista = new Artista($name, $image);
                     if(isset($generos)){
-                        $artista->insereArtista($conn, $json['items'][$i]['name'], $generos);
+                        $artista->insereArtista($conn, $generos);
                     }
                     else{
-                        $artista->insereArtista($conn, $json['items'][$i]['name'], null);
+                        $artista->insereArtista($conn, null);
                     }
                     unset($generos);
                 }
                 $dados['Login'] = $login;
-                $dados['Nome'] = $json['items'][$i]['name'];
+                $dados['Nome'] = $name;
                 save($conn, 'gosta', $dados);
             }
+            $retorno = 1;
         }
         close_database($conn);
+        return $retorno;
 
     }
 
@@ -93,7 +96,7 @@ class Usuario
             }
             else{
                 foreach($procura as $gosto){
-                    $artista = new Artista($gosto['Nome']);
+                    $artista = new Artista($gosto['Nome'],null);
                     $artista->carrega($conn);
                     $this->topArtistas[] = $artista;
                 }

@@ -27,35 +27,39 @@ class Artista
      * Construtor
      * @access public
      */
-    public function __construct($nome) {
+    public function __construct($nome, $imagem) {
         $this->nome = $nome;
+        if($imagem!=null)
+            $this->imagem = $imagem;
 
     }
 
-    public function insereArtista($conn, $nome, $genres){
-        if(existeRecurso($nome)){
-            $generos = achaGeneros($nome);
-            $locais = achaLocal($nome);
-            $ano = achaAno($nome);
-            $associados = achaAssociados($nome);
+    public function insereArtista($conn, $genres){
+        if(existeRecurso($this->nome)){
+            $generos = achaGeneros($this->nome);
+            $locais = achaLocal($this->nome);
+            $ano = achaAno($this->nome);
+            $associados = achaAssociados($this->nome);
             //$parecidos = achaParecidosGenero($aux);
         }
-        $procura = find($conn, 'artista', $nome);
+        $procura = find($conn, 'artista', $this->nome);
         if($procura!=null){
             if(isset($ano)){
                 $dados['anoInicio'] = $ano;
-                update($conn, 'artista', $nome, $dados);
+                $dados['Imagem'] = $this->imagem;
+                update($conn, 'artista', $this->nome, $dados);
                 unset($dados);  
             }
         }
         else{
-            $dados['Nome'] = $nome;
+            $dados['Nome'] = $this->nome;
+            $dados['Imagem'] = $this->imagem;
             if(isset($ano))
                 $dados['anoInicio'] = $ano;
             save($conn, 'artista', $dados);
             unset($dados);
         }
-        $dados['Nome'] = $nome;
+        $dados['Nome'] = $this->nome;
         if(isset($genres)){
             foreach($genres as $genre){
                 $dados['Genero'] = $genre;
@@ -63,7 +67,7 @@ class Artista
             }
         }
         unset($dados);
-        $dados['Nome'] = $nome;
+        $dados['Nome'] = $this->nome;
         if(isset($generos)){
             foreach($generos as $genero){
                 $dados['Genero'] = $genero;
@@ -71,7 +75,7 @@ class Artista
             }
         }    
         unset($dados);
-        $dados['Nome'] = $nome;
+        $dados['Nome'] = $this->nome;
         if(isset($locais)){
             foreach($locais as $local){
                 $dados['Local'] = $local;
@@ -87,7 +91,7 @@ class Artista
                     save($conn, 'artista', $dados); 
                     unset($dados);
                 }
-                $dados['A'] = $nome;
+                $dados['A'] = $this->nome;
                 $dados['B'] = $associado;
                 save($conn, 'associado', $dados);
                 unset($dados);
