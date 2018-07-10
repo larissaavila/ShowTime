@@ -46,10 +46,10 @@ class Artista
         if($procura!=null){
             if(isset($ano)){
                 $dados['anoInicio'] = $ano;
-                $dados['Imagem'] = $this->imagem;
-                update($conn, 'artista', $this->nome, $dados);
-                unset($dados);  
             }
+            $dados['Imagem'] = $this->imagem;
+            update($conn, 'artista', $this->nome, $dados);
+            unset($dados);  
         }
         else{
             $dados['Nome'] = $this->nome;
