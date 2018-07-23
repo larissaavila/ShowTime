@@ -1,0 +1,168 @@
+{
+  "items": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5F1aoppMtU3OMiltO8ymJ2"
+      },
+      "followers": {
+        "href": null,
+        "total": 39789
+      },
+      "genres": [
+        "hollywood"
+      ],
+      "href": "https://api.spotify.com/v1/artists/5F1aoppMtU3OMiltO8ymJ2",
+      "id": "5F1aoppMtU3OMiltO8ymJ2",
+      "images": [
+        {
+          "height": 1000,
+          "url": "https://i.scdn.co/image/e8f69e48f7ae80c6247fda3bf03d6155ae0d7282",
+          "width": 1000
+        },
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ecc60c29567d41d3b13059175bc8154ed279463e",
+          "width": 640
+        },
+        {
+          "height": 200,
+          "url": "https://i.scdn.co/image/3274a4a5900c96da8247c4935d2df27590cd4d79",
+          "width": 200
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/f4de2ce820fb98534eb5260a678fee911921f52e",
+          "width": 64
+        }
+      ],
+      "name": "Hugh Jackman",
+      "popularity": 75,
+      "type": "artist",
+      "uri": "spotify:artist:5F1aoppMtU3OMiltO8ymJ2"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6S2OmqARrzebs0tKUEyXyp"
+      },
+      "followers": {
+        "href": null,
+        "total": 9883263
+      },
+      "genres": [
+        "dance pop",
+        "pop",
+        "post-teen pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6S2OmqARrzebs0tKUEyXyp",
+      "id": "6S2OmqARrzebs0tKUEyXyp",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/1b7682c463034f7cda95f6ac7a44385dd000422b",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/b2e15be12453b28ff54fb7624c2920a11f8b8cfe",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/248c1b018defafe93f9394b41bfdb8110ccff536",
+          "width": 160
+        }
+      ],
+      "name": "Demi Lovato",
+      "popularity": 86,
+      "type": "artist",
+      "uri": "spotify:artist:6S2OmqARrzebs0tKUEyXyp"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+      },
+      "followers": {
+        "href": null,
+        "total": 13829889
+      },
+      "genres": [
+        "dance pop",
+        "pop",
+        "post-teen pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+      "id": "06HL4z0CvFAxyc27GXpf02",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/bdaeccb035a8af87b7a70b62217ff5c633ba6c7c",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/cec43c2fb746ea2a0c7546aa3408fe2f94887fe4",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/33bc9128ad82f7d39847b6db6a49d5416502e7e7",
+          "width": 160
+        }
+      ],
+      "name": "Taylor Swift",
+      "popularity": 85,
+      "type": "artist",
+      "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2NhdGz9EDv2FeUw6udu2g1"
+      },
+      "followers": {
+        "href": null,
+        "total": 1451096
+      },
+      "genres": [
+        "boy band",
+        "dance pop",
+        "pop",
+        "post-teen pop",
+        "viral pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2NhdGz9EDv2FeUw6udu2g1",
+      "id": "2NhdGz9EDv2FeUw6udu2g1",
+      "images": [
+        {
+          "height": 749,
+          "url": "https://i.scdn.co/image/ac3995e49a3f4d6922990776235e4aabd4c751ce",
+          "width": 1000
+        },
+        {
+          "height": 479,
+          "url": "https://i.scdn.co/image/02f98ede40589bffa81d7533bd224bf2e718fc29",
+          "width": 640
+        },
+        {
+          "height": 150,
+          "url": "https://i.scdn.co/image/76c4672f95271e2ca7212a749be5095ffefc4dbb",
+          "width": 200
+        },
+        {
+          "height": 48,
+          "url": "https://i.scdn.co/image/5e127f282eba948648b129be2fd5adc0dce34db4",
+          "width": 64
+        }
+      ],
+      "name": "The Wanted",
+      "popularity": 65,
+      "type": "artist",
+      "uri": "spotify:artist:2NhdGz9EDv2FeUw6udu2g1"
+    }
+  ],
+  "total": 9,
+  "limit": 10,
+  "offset": 5,
+  "href": "https://api.spotify.com/v1/me/top/artists?limit=10&offset=5&time_range=short_term",
+  "previous": null,
+  "next": null
+}

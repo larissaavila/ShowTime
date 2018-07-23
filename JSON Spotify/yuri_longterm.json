@@ -1,0 +1,384 @@
+{
+  "items": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0PuGmVGO84I2ZxqzjPIrUg"
+      },
+      "followers": {
+        "href": null,
+        "total": 2231
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/0PuGmVGO84I2ZxqzjPIrUg",
+      "id": "0PuGmVGO84I2ZxqzjPIrUg",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/570352757a1e4873a48de00d604f757d9c9467cb",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/d702db16b3b6c198832d773668b327b3d9f716e1",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/9dbe5048ff7abacd1f42b69e51acf1c98cfbeae0",
+          "width": 64
+        }
+      ],
+      "name": "SIX PACK",
+      "popularity": 20,
+      "type": "artist",
+      "uri": "spotify:artist:0PuGmVGO84I2ZxqzjPIrUg"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6deZN1bslXzeGvOLaLMOIF"
+      },
+      "followers": {
+        "href": null,
+        "total": 2888503
+      },
+      "genres": [
+        "alternative metal",
+        "canadian pop",
+        "canadian rock",
+        "nu metal",
+        "post-grunge"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6deZN1bslXzeGvOLaLMOIF",
+      "id": "6deZN1bslXzeGvOLaLMOIF",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/3cab7a705d1fefebd1f7c8bf03f27587ae697ead",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ebcd33c2a80269b32a62af0240322ff115ef9077",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/60732fcec7fae58bd7684c2793900dec68528aa7",
+          "width": 160
+        }
+      ],
+      "name": "Nickelback",
+      "popularity": 73,
+      "type": "artist",
+      "uri": "spotify:artist:6deZN1bslXzeGvOLaLMOIF"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+      },
+      "followers": {
+        "href": null,
+        "total": 8632527
+      },
+      "genres": [
+        "british invasion",
+        "merseybeat",
+        "psychedelic rock",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+      "id": "3WrFJ7ztbogyGnTHbHJFl2",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/197cff807611777427c93258f0a1ccdf6b013b09",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/2a80bb1f1da720b80ce29e7eff73a0b13d6a5c88",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/b7d99ec41485c47e8cfc0401de182b948b5f9d49",
+          "width": 160
+        }
+      ],
+      "name": "The Beatles",
+      "popularity": 82,
+      "type": "artist",
+      "uri": "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7nU4hB040gTmHm45YYMvqc"
+      },
+      "followers": {
+        "href": null,
+        "total": 1420967
+      },
+      "genres": [
+        "dance pop",
+        "pop",
+        "post-teen pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/7nU4hB040gTmHm45YYMvqc",
+      "id": "7nU4hB040gTmHm45YYMvqc",
+      "images": [
+        {
+          "height": 1096,
+          "url": "https://i.scdn.co/image/1bb652996764243c1d963008898de2ab514b4796",
+          "width": 822
+        },
+        {
+          "height": 853,
+          "url": "https://i.scdn.co/image/0f08574233467fe4e5ffb889ece10b9c0868610e",
+          "width": 640
+        },
+        {
+          "height": 267,
+          "url": "https://i.scdn.co/image/21dafec9d875038f5d2dbaa842ef37422a84b3aa",
+          "width": 200
+        },
+        {
+          "height": 85,
+          "url": "https://i.scdn.co/image/473d0d85a8aae2366ec20819419462487a190152",
+          "width": 64
+        }
+      ],
+      "name": "Miley Cyrus",
+      "popularity": 62,
+      "type": "artist",
+      "uri": "spotify:artist:7nU4hB040gTmHm45YYMvqc"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6eUKZXaKkcviH0Ku9w2n3V"
+      },
+      "followers": {
+        "href": null,
+        "total": 28880995
+      },
+      "genres": [
+        "pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6eUKZXaKkcviH0Ku9w2n3V",
+      "id": "6eUKZXaKkcviH0Ku9w2n3V",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/f0370da3f52161b07a461b4be9a64d0adbfb498d",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/e21f791b600f04f9dd8ad2b6d9b3304a82e048ca",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/f39b705ba6b1070c77bce4e9c21dff5bac96f21c",
+          "width": 160
+        }
+      ],
+      "name": "Ed Sheeran",
+      "popularity": 89,
+      "type": "artist",
+      "uri": "spotify:artist:6eUKZXaKkcviH0Ku9w2n3V"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2NvmDZar6FF2CICK1yBS4I"
+      },
+      "followers": {
+        "href": null,
+        "total": 130025
+      },
+      "genres": [
+        "contemporary country"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2NvmDZar6FF2CICK1yBS4I",
+      "id": "2NvmDZar6FF2CICK1yBS4I",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/47d4660329a0f088bb0f462d787af36f3792eaf0",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/6e50684744778c77697391a6a980e2a45bcc3935",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/2844e975871aaf9288b578fb4a6c8428fe49bd86",
+          "width": 160
+        }
+      ],
+      "name": "Nashville Cast",
+      "popularity": 59,
+      "type": "artist",
+      "uri": "spotify:artist:2NvmDZar6FF2CICK1yBS4I"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d"
+      },
+      "followers": {
+        "href": null,
+        "total": 8409893
+      },
+      "genres": [
+        "glam rock",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1dfeR4HaWDbWqFHLkxsg1d",
+      "id": "1dfeR4HaWDbWqFHLkxsg1d",
+      "images": [
+        {
+          "height": 806,
+          "url": "https://i.scdn.co/image/b040846ceba13c3e9c125d68389491094e7f2982",
+          "width": 999
+        },
+        {
+          "height": 516,
+          "url": "https://i.scdn.co/image/af2b8e57f6d7b5d43a616bd1e27ba552cd8bfd42",
+          "width": 640
+        },
+        {
+          "height": 161,
+          "url": "https://i.scdn.co/image/c06971e9ff81696699b829484e3be165f4e64368",
+          "width": 200
+        },
+        {
+          "height": 52,
+          "url": "https://i.scdn.co/image/6dd0ffd270903d1884edf9058c49f58b03db893d",
+          "width": 64
+        }
+      ],
+      "name": "Queen",
+      "popularity": 80,
+      "type": "artist",
+      "uri": "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2tCT4ybLKzhFYsDF6ZOKAY"
+      },
+      "followers": {
+        "href": null,
+        "total": 5227
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/2tCT4ybLKzhFYsDF6ZOKAY",
+      "id": "2tCT4ybLKzhFYsDF6ZOKAY",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/0c520e131c834ae9f38ce27acbf325f96d8df937",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/0173865954bf4c444ff5f69d8b63f32535b21fdc",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/0081bcf8a0a35b22a4070af23a690f1aabe06037",
+          "width": 160
+        }
+      ],
+      "name": "Rachel Bloom",
+      "popularity": 45,
+      "type": "artist",
+      "uri": "spotify:artist:2tCT4ybLKzhFYsDF6ZOKAY"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0zOcE3mg9nS6l3yxt1Y0bK"
+      },
+      "followers": {
+        "href": null,
+        "total": 1850480
+      },
+      "genres": [
+        "neo mellow",
+        "piano rock",
+        "pop",
+        "pop rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/0zOcE3mg9nS6l3yxt1Y0bK",
+      "id": "0zOcE3mg9nS6l3yxt1Y0bK",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/7ef82e06e47b33e302ca2503f3decfbf9c7f2fff",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/d19249b41f63eadf3e44321bf373e13ec57d3c63",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/fcc84ce9cdd396ffca78dd90a309f2806e86c710",
+          "width": 160
+        }
+      ],
+      "name": "The Fray",
+      "popularity": 69,
+      "type": "artist",
+      "uri": "spotify:artist:0zOcE3mg9nS6l3yxt1Y0bK"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5Pwc4xIPtQLFEnJriah9YJ"
+      },
+      "followers": {
+        "href": null,
+        "total": 5153959
+      },
+      "genres": [
+        "dance pop",
+        "piano rock",
+        "pop",
+        "pop quebecois",
+        "pop rap",
+        "pop rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/5Pwc4xIPtQLFEnJriah9YJ",
+      "id": "5Pwc4xIPtQLFEnJriah9YJ",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/c52d6c4414892e4eebe6ae7a3d3d441f7728139b",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ed820cbe5e511c41049c0dc8b34eb6120911f055",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/78c87b3e7e3158f1b1dfda6d8bdbf766bfcf73fd",
+          "width": 160
+        }
+      ],
+      "name": "OneRepublic",
+      "popularity": 81,
+      "type": "artist",
+      "uri": "spotify:artist:5Pwc4xIPtQLFEnJriah9YJ"
+    }
+  ],
+  "total": 50,
+  "limit": 10,
+  "offset": 10,
+  "href": "https://api.spotify.com/v1/me/top/artists?limit=10&offset=10&time_range=long_term",
+  "previous": "https://api.spotify.com/v1/me/top/artists?limit=10&offset=0&time_range=long_term",
+  "next": "https://api.spotify.com/v1/me/top/artists?limit=10&offset=20&time_range=long_term"
+}
