@@ -1,5 +1,3 @@
-<?php require_once 'inc/headerUser.php';?>
-
 <?php
 	if(session_status()!=PHP_SESSION_ACTIVE)
           session_start();
@@ -8,5 +6,5 @@
 	}
 	else{
 		header("Location: index.php");
-	}
-	?>
+	}?>
+<?php require_once 'inc/headerUser.php';?>
