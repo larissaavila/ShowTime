@@ -50,7 +50,8 @@
 
 	<div class="row">
 
-
+<h2>Cadastre-se!</h2>
+<hr/>
 
 <?php if (!empty($_SESSION['message'])) : ?>
 

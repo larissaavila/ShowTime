@@ -37,7 +37,6 @@
 <link href="css/signin.css" rel="stylesheet">
 
 
-
 <div class="container">
 
 	<div class="row">
@@ -58,7 +57,8 @@
 
 <?php endif; ?>
 
-
+<h2>Bem-vindo(a) ao ShowTime</h2>
+<hr/>
 
 	<form class="form-signin" method="post">
 

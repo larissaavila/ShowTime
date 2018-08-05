@@ -1,0 +1,13 @@
+.modal {
+  text-align: center;       /* Center the modal window. */
+}
+
+.modal-dialog {
+  width: auto;
+  margin: 30px auto;
+  display: inline-block;
+}
+
+.modal-dialog {
+  overflow: auto;
+}

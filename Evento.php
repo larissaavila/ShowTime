@@ -40,7 +40,7 @@ class Evento
 
      */
 
-	private $nome, $local, $data, $descricao, $imagem, $Artista;
+	private $nome, $local, $data, $descricao, $Artista, $imagem;
 
 
 
@@ -56,21 +56,21 @@ class Evento
 
      */
 
-    public function __construct($evento) {
+    public function __construct($evento=null) {
 
-        $this->nome = $evento['Nome'];
+        if(isset($evento)){
+            $this->nome = $evento['Nome'];
 
-        $this->local = $evento['Local'];
+            $this->local = $evento['Local'];
 
-        $this->data = $evento['Data'];
+            $this->data = $evento['Data'];
 
-        $this->descricao = $evento['Descricao'];
+            $this->descricao = $evento['Descricao'];
 
-        $this->imagem = $evento['Imagem'];
+            $this->Artista = $evento['Artista'];
 
-        $this->Artista = $evento['Artista'];
-
-
+            $this->imagem = null;
+        }
 
     }
 
@@ -83,9 +83,14 @@ class Evento
         $procura = find($conn, 'artista', $artista);
 
         if($procura==null){
+            $artista = new Artista($artista);
+            $artista->setImage();
+            $artista->insereArtista($conn, $artista->obtainGenres());
 
-            insereArtista($conn, $artista, null);
-
+        }
+        else if($procura[0]['Imagem']==null){
+            $artista = new Artista($artista);
+            $artista->setImage($conn);
         }
 
         $dados['Nome'] = $nome;
@@ -128,6 +133,22 @@ class Evento
 
         return $this->descricao;
 
+    }
+
+    public function getData(){
+        $retorno = explode("-",$this->data);
+        return $retorno[2] . "/" . $retorno[1] . "/" . $retorno[0];
+    }
+
+    public function setImage(){
+        $conn = open_database();
+        $artista = find($conn, 'artista', $this->Artista);
+        $this->imagem = $artista[0]['Imagem'];
+        close_database($conn);
+    }
+
+    public function getImage(){
+        return $this->imagem;
     }
 
 

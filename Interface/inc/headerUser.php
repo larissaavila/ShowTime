@@ -28,6 +28,7 @@
                 <ul class="nav navbar-nav">
                     <li "active"> <a href="top.php">Top Artistas</a></li>
                     <li> <a href="recomendacao.php">Recomendação de Eventos</a></li>
+                    <li> <a href="buscaAssociado.php">Buscar artistas parecidos</a></li>
                     <li> <a href="logout.php">Sair</a></li>
                 </ul>
             </div>
